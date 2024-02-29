@@ -34,9 +34,6 @@ class MainWindow(QMainWindow):
             msg_box.setText("something wrong")
             msg_box.exec_()
 
-    def check_status(self):
-        ...
-
     def show_description(self, task, x):
         details = f"description:\n  {task[2]}\ndate and time:\n  {task[5]}"
         msg_box = QMessageBox()
@@ -56,7 +53,7 @@ class MainWindow(QMainWindow):
             priority_btn = QPushButton()
 
             new_label.setText(tasks[i][1])
-            new_label.setStyleSheet("background-color: orange")
+            # new_label.setStyleSheet("background-color: orange")
             del_btn.setText("Delete")
             
             if tasks[i][4] == "Low":
